@@ -1,0 +1,439 @@
+fileFormatVersion: 2
+guid: 247739c427e93c747aaa59c3b03882ce
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4872217628434630413
+    second: Background details_0
+  - first:
+      213: 6314205295441980002
+    second: Background details_1
+  - first:
+      213: 2228599018479089817
+    second: Background details_2
+  - first:
+      213: -1931968082244336130
+    second: Background details_3
+  - first:
+      213: -954574540475053927
+    second: Background details_4
+  - first:
+      213: -2426124037044717796
+    second: Background details_5
+  - first:
+      213: -8783948957164816157
+    second: Background details_6
+  - first:
+      213: 7498895491611547777
+    second: Background details_7
+  - first:
+      213: 7108384752983170299
+    second: Background details_8
+  - first:
+      213: 5909586128211620530
+    second: Background details_9
+  - first:
+      213: -1990731269230071794
+    second: Background details_10
+  - first:
+      213: 2417804716001033452
+    second: Background details_11
+  - first:
+      213: -4928572504976988033
+    second: Background details_12
+  - first:
+      213: -7974366571733078079
+    second: Background details_13
+  - first:
+      213: -4114211526516637277
+    second: Background details_14
+  - first:
+      213: -4250906076812052465
+    second: Background details_15
+  - first:
+      213: 2766998943622003745
+    second: Background details_16
+  - first:
+      213: -4434493959585939779
+    second: Background details_17
+  - first:
+      213: 5955229713503065469
+    second: Background details_18
+  - first:
+      213: -9206556125872511179
+    second: Background details_19
+  - first:
+      213: -2668108802212042797
+    second: Background details_20
+  - first:
+      213: -1402017306113280399
+    second: Background details_21
+  - first:
+      213: -2602257700401721707
+    second: Background details_22
+  - first:
+      213: -7196224274294518531
+    second: Background details_23
+  - first:
+      213: -6136091039973937175
+    second: Background details_24
+  - first:
+      213: 6414286388426444138
+    second: Background details_25
+  - first:
+      213: -4356283324141361048
+    second: Background details_26
+  - first:
+      213: -453469037666800847
+    second: Background details_27
+  - first:
+      213: -4365796190924420388
+    second: Background details_28
+  - first:
+      213: 5065548496075913257
+    second: Background details_29
+  - first:
+      213: 6429320352760283568
+    second: Background details_30
+  - first:
+      213: 3064957908097106054
+    second: Background details_31
+  - first:
+      213: 5186776576891686386
+    second: Background details_32
+  - first:
+      213: -2742101821724863997
+    second: Background details_33
+  - first:
+      213: 8415065505444011821
+    second: Background details_34
+  - first:
+      213: 3792961100786659510
+    second: Background details_35
+  - first:
+      213: 3991128796134886137
+    second: Background details_36
+  - first:
+      213: -8463539329579792625
+    second: Background details_37
+  - first:
+      213: -5206278731119654535
+    second: Background details_38
+  - first:
+      213: 5244265597686971737
+    second: Background details_39
+  - first:
+      213: 5048680977721093423
+    second: Background details_40
+  - first:
+      213: -101728152940683893
+    second: Background details_41
+  - first:
+      213: 8945189726690741110
+    second: Background details_42
+  - first:
+      213: 6577636128566738967
+    second: Background details_43
+  - first:
+      213: -2651306222513616135
+    second: Background details_44
+  - first:
+      213: -7582051125417004697
+    second: Background details_45
+  - first:
+      213: -4852080814271944934
+    second: Background details_46
+  - first:
+      213: -87295856480774732
+    second: Background details_47
+  - first:
+      213: -5274573813354461179
+    second: Background details_48
+  - first:
+      213: -6269154584197473814
+    second: Background details_49
+  - first:
+      213: -9215475553839736284
+    second: Background details_50
+  - first:
+      213: 7699340652875945790
+    second: Background details_51
+  - first:
+      213: 1110929911326606019
+    second: Background details_52
+  - first:
+      213: 8880354217093314740
+    second: Background details_53
+  - first:
+      213: -1256301271167205553
+    second: Background details_54
+  - first:
+      213: -9163285132447457360
+    second: Background details_55
+  - first:
+      213: 7937318238915161177
+    second: Background details_56
+  - first:
+      213: 4139408775654258149
+    second: Background details_57
+  - first:
+      213: -5440212814622464103
+    second: Background details_58
+  - first:
+      213: -946016305419481867
+    second: Background details_59
+  - first:
+      213: -4944953762153424523
+    second: Background details_60
+  - first:
+      213: 6662792681680607655
+    second: Background details_61
+  - first:
+      213: 8348215488632527036
+    second: Background details_62
+  - first:
+      213: -5524727164173407249
+    second: Background details_63
+  - first:
+      213: -8317434404253379681
+    second: Background details_64
+  - first:
+      213: -7594035869703978388
+    second: Background details_65
+  - first:
+      213: -1719064488744319175
+    second: Background details_66
+  - first:
+      213: 1663166189933860039
+    second: Background details_67
+  - first:
+      213: -2078287248599356965
+    second: Background details_68
+  - first:
+      213: 2134109604270150350
+    second: Background details_69
+  - first:
+      213: 6068913987178954664
+    second: Background details_70
+  - first:
+      213: 5697343107748223514
+    second: Background details_71
+  - first:
+      213: 3630126254246277804
+    second: Background details_72
+  - first:
+      213: -8665724726327699646
+    second: Background details_73
+  - first:
+      213: 3811736895432592737
+    second: Background details_74
+  - first:
+      213: 779013603936044812
+    second: Background details_75
+  - first:
+      213: -9180924751857704262
+    second: Background details_76
+  - first:
+      213: 1044649070070681739
+    second: Background details_77
+  - first:
+      213: 916337084223960978
+    second: Background details_78
+  - first:
+      213: -4535665009060795208
+    second: Background details_79
+  - first:
+      213: 9003665305476408409
+    second: Background details_80
+  - first:
+      213: -3255634552572495610
+    second: Background details_81
+  - first:
+      213: -2735303329922070859
+    second: Background details_82
+  - first:
+      213: 1326372641498913789
+    second: Background details_83
+  - first:
+      213: 9194952500265420079
+    second: Background details_84
+  - first:
+      213: -5892565848301795729
+    second: Background details_85
+  - first:
+      213: -753418968781410141
+    second: Background details_86
+  - first:
+      213: -3768031536189333677
+    second: Background details_87
+  - first:
+      213: 1426183816207461590
+    second: Background details_88
+  - first:
+      213: -7092469761984297045
+    second: Background details_89
+  - first:
+      213: -508117322019066060
+    second: Background details_90
+  - first:
+      213: 7822895884733976806
+    second: Background details_91
+  - first:
+      213: -5318741616419023784
+    second: Background details_92
+  - first:
+      213: 6716451533792065733
+    second: Background details_93
+  - first:
+      213: 51053938342248051
+    second: Background details_94
+  - first:
+      213: -8965154034675820882
+    second: Background details_95
+  - first:
+      213: -3647521236977446744
+    second: Background details_96
+  - first:
+      213: 7399368048461459537
+    second: Background details_97
+  - first:
+      213: 4507968936917663019
+    second: Background details_98
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Background details_0
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 260
+        width: 2111
+        height: 4492
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f8f1cc81e7626cb0800000000000000
+      internalID: -4872217628434630413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 2bb2ad642cb042648a0dbfa8c1f3f05c
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":2484.0,"y":5376.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Background details_0: -4872217628434630413
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

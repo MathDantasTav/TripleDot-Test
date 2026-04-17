@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b3498a95f80cfc45bf30627620b2c27, type: 3}
+  m_Name: Translations
+  m_EditorClassIdentifier: Assembly-CSharp::LanguageTranslations
+  LanguagesInfo:
+  - Language: 0
+    FlagIcon: {fileID: -3412720011690086418, guid: 76db1442f6710264cb0a2ca6aba6ce57, type: 3}
+  - Language: 1
+    FlagIcon: {fileID: 2075822635725404491, guid: 2522daa138e6d9a4a8dbbd7e4af8dbd2, type: 3}
+  CachedTranslations:
+  - Key: BottomBar_Home
+    Translations:
+    - "Home\r"
+    - Menu
+  - Key: BottomBar_Shop
+    Translations:
+    - "Shop\r"
+    - Loja
+  - Key: BottomBar_Map
+    Translations:
+    - "Map\r"
+    - Mapa
+  - Key: HealthBarFull
+    Translations:
+    - "Full\r"
+    - Cheio
+  - Key: Settings_Title
+    Translations:
+    - "Settings\r"
+    - "Op\xE7\xF5es"
+  - Key: Settings_Options_Sound
+    Translations:
+    - "Sound\r"
+    - Som
+  - Key: Settings_Options_Music
+    Translations:
+    - "Music\r"
+    - "M\xFAsica"
+  - Key: Settings_Options_Vibrations
+    Translations:
+    - "Vibrations\r"
+    - "Vibra\xE7\xF5es"
+  - Key: Settings_Options_Notifications
+    Translations:
+    - "Notifications\r"
+    - "Notifica\xE7\xF5es"
+  - Key: Settings_Options_Language
+    Translations:
+    - "Language\r"
+    - Idioma
+  - Key: Settings_T&C
+    Translations:
+    - "T&C\r"
+    - Termos
+  - Key: Settings_Privacy
+    Translations:
+    - "Privacy\r"
+    - Privacidade
+  - Key: Settings_Support
+    Translations:
+    - "Support\r"
+    - Suporte
+  - Key: Level_Completed_Title
+    Translations:
+    - Level Completed!
+    - "N\xEDvel Completado!"
+  OnLanguageChanged:
+    m_PersistentCalls:
+      m_Calls: []
