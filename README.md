@@ -7,7 +7,7 @@
 
 This project implements a simple UI-driven main menu with responsive layout, animated bottom navigation, and debug tools for testing UI states.
 
----------------------------------------------------------------------------------------------------------------------------
+---
 # Main Menu Overview
 
 The main menu consists of:
@@ -35,8 +35,6 @@ A bottom bar with 5 buttons was implemented with support for:
 - Locked/Unlocking animations
 - Icon animations per button
 
-![Bottom Bar](Gifs/bottomButtons.gif)
-
 Bottom bar also contains two UnityEvents:
 
 - ContentActivated: triggered when a button is pressed
@@ -44,7 +42,7 @@ Bottom bar also contains two UnityEvents:
 
 Controller scripts:
 [BottomBarView.cs](Unity%20Project/Assets/Scripts/Main_Menu/BottomBarView.cs)
-[BottomBarView.cs](Unity%20Project/Assets/Scripts/Main_Menu/BottomBarButton.cs)
+[BottomBarButton.cs](Unity%20Project/Assets/Scripts/Main_Menu/BottomBarButton.cs)
 
 ### Debug Controls
 
@@ -54,11 +52,16 @@ A debug button in the bottom-left of the main menu provides tools to test UI beh
 - Locking/Unlocking bottom bar buttons
 - Previewing bottom bar buttons icon animations
 
-![Bottom Bar Appears](BottomBarAppears.gif)
+<p align="center">
+  <img src="Gifs/BottomBarAppears.gif" width="400">
+</p>
 
 </details>
+<p align="center">
+  <img src="Gifs/bottomButtons.gif" width="400">
+</p>
 
--------------------------------------------------
+---
 # Screen System
 _**Generic system used for the Settings Popup and other UI screens.**_
 
@@ -68,8 +71,6 @@ Screens are built on a shared base class and prefab that defines consistent life
 
 - Blurred background layer for visual focus
 - Appear/Idle/Disappear animations
-
-![Screen System](Gifs/ScreenSystem.gif)
 
 <details>
 <summary>Screen Architecture</summary>
@@ -113,9 +114,16 @@ Shader:
 ### UI Feedback System
 
 [BtnFeedback.cs](Unity%20Project/Assets/Scripts/UI/BtnFeedback.cs) and [Toggle.cs](Unity%20Project/Assets/Scripts/UI/Toggle.cs) provide a generic UI feedback layer used across all buttons and toggles in the project. They handle scale, color, and sound feedback to ensure consistent interaction responses across the UI.
-</details>
 
----------------------------------------------------------------------------------------------------------------------------
+<p align="center">
+  <img src="Gifs/BtnFeedback.gif" width="400">
+</p>
+</details>
+<p align="center">
+  <img src="Gifs/ScreenSystem.gif" width="200">
+</p>
+
+---
 # Language System
 
 A fully functional global localisation system powered by an external Google Sheet, providing complete runtime text translation, language switching, and editor-driven workflow updates.
@@ -167,14 +175,12 @@ Prefab: [TranslatedText.prefab](Unity%20Project/Assets/Prefabs/TranslatedText.pr
 Script: [TextTranslator.cs](Unity%20Project/Assets/Scripts/Language/TextTranslator.cs)
 </details>
 
-------------------------------------
+---
 # Level Completed Screen
 
 A Level Completed screen was implemented and can be triggered via a test button in the HomeScreen.
 
 The sequence includes an initial animation with particles, UI scaling effects, and a final shine transition.
-
-![Level Completed](Gifs/LevelCompleted.gif)
 
 <details>
 <summary>Level Completed Animations</summary>
@@ -184,3 +190,6 @@ The sequence includes an initial animation with particles, UI scaling effects, a
 - [TMPNumberAnimation.cs](Unity%20Project/Assets/Scripts/Animations/TMPNumberAnimation.cs) animates a numeric value from 0 to 250 during the reward sequence
 - [ScrollingTiledImage.shader](Unity%20Project/Assets/Art/Shaders/Scrolling%20Tilled%20Image/ScrollingTiledImage.shader) A custom scrolling texture effect used for the background
 </details>
+<p align="center">
+  <img src="Gifs/LevelCompleted.gif" width="200">
+</p>
