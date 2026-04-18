@@ -157,8 +157,8 @@ The system includes an inspector button in LanguageManager to sync translations 
 ### To add a new language:
 
 - Add it to the [Google Sheet](https://docs.google.com/spreadsheets/d/1fwy4EqNHLJazoDyAI4jabAOXqOYztwM39k4eBC1m0wY/edit?usp=sharing)
-- Add the enum in [LanguageTranslations.cs](Unity%20Project/Assets/Scripts/Language/LanguageTranslations.cs)
-- Click the update button in [LanguageManager.cs](Unity%20Project/Assets/Scripts/Language/LanguageManager.cs)
+- Add the enum in [LanguageTranslations.cs](Unity%20Project/Assets/Scripts/Language/LanguageTranslations.cs) (Must match the Google Sheet language key exactly)
+- Click the update button in [LanguageManager.cs](Unity%20Project/Assets/Scripts/Language/LanguageManager.cs) (Found in the LanguageManager object)
 - Register it in [Translations](Unity%20Project/Assets/Resources/Translations.asset) (LanguagesInfo with enum + flag icon)
 
 The language then becomes available automatically in the UI.
