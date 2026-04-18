@@ -1,3 +1,6 @@
+## Test the game
+[AndroidAPK](Builds/Android.apk)
+
 # Unity UI Test Project
 
 This project implements a simple UI-driven main menu with responsive layout, animated bottom navigation, and debug tools for testing UI states.
