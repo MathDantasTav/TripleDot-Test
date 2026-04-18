@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 70da33076d490cb4db1ddc221643964a
+guid: 74d65adad64e09248bba022dc2193182
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -985431333153314300
-    second: TripledotAppIcon_0
+      213: 667967085240655388
+    second: Background_Main_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,7 +73,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TripledotAppIcon_0
+      name: Background_Main_0
       rect:
         serializedVersion: 2
-        x: 17
-        y: 9
-        width: 179
-        height: 152
+        x: 0
+        y: 0
+        width: 2484
+        height: 4820
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 40a6bdc6c6b0352f0800000000000000
-      internalID: -985431333153314300
+      spriteID: c1e1c656688154900800000000000000
+      internalID: 667967085240655388
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 69258aefec71a1c488ae2749a88e9a08
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -159,11 +159,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     spriteCustomMetadata:
-      entries:
-      - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":300.0,"y":300.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+      entries: []
     nameFileIdTable:
-      TripledotAppIcon_0: -985431333153314300
+      Background_Main_0: 667967085240655388
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
