@@ -42,17 +42,13 @@ public class NarrowResolutionScaler : MonoBehaviour
         }
     }
     
-#if UNITY_EDITOR
     private Vector2 _lastCanvasSize;
-#endif
 
     void Start()
     {
         ApplyResolutionScaling();
     }
 
-#if UNITY_EDITOR
-    // Only run in editor (avoid per-frame cost in play mode if you want)
     void Update()
     {
         if (_lastCanvasSize.x != CanvasRect.rect.width ||
@@ -61,7 +57,6 @@ public class NarrowResolutionScaler : MonoBehaviour
             ApplyResolutionScaling();
         }
     }
-#endif
 
     void OnValidate()
     {
@@ -70,9 +65,7 @@ public class NarrowResolutionScaler : MonoBehaviour
     
     void ApplyResolutionScaling()
     {
-#if UNITY_EDITOR
         _lastCanvasSize = new Vector2(CanvasRect.rect.width, CanvasRect.rect.height);
-#endif
         
         Canvas.ForceUpdateCanvases();
 
