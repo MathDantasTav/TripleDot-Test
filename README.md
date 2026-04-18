@@ -3,9 +3,6 @@
 This project implements a simple UI-driven main menu with responsive layout, animated bottom navigation, and debug tools for testing UI states.
 
 ---------------------------------------------------------------------------------------------------------------------------
-<details>
-<summary>Main Menu Overview</summary>
-
 # Main Menu Overview
 
 The main menu consists of:
@@ -14,8 +11,12 @@ The main menu consists of:
 - A bottom navigation bar with 5 interactive buttons
 - UI animations for transitions and state changes
 - A debug panel for testing UI behavior
-- Responsive Background
 
+<details>
+<summary>Main Menu Details</summary>
+  
+### Background scaling
+  
 A custom script was implemented to ensure the background image scales correctly across different resolutions while preserving aspect ratio and preventing stretching.
 
 Script:
@@ -49,19 +50,19 @@ A debug button in the bottom-left of the main menu provides tools to test UI beh
 </details>
 
 -------------------------------------------------
-<details>
-<summary>Screen System</summary>
-
 # Screen System
 
 A reusable UI screen framework built to standardise screen behaviour, transitions, and instantiation across the project.
-
-### Architecture
-
 Screens are built on a shared base class and prefab that defines consistent lifecycle behaviour:
 
 - Blurred background layer for visual focus
 - Appear/Idle/Disappear animations
+
+
+<details>
+<summary>Screen Architecture</summary>
+
+### Base generic Script and Prefab used by all Screens
 
 Script:
 [ScreenInstance.cs](Unity%20Project/Assets/Scripts/Screens/ScreenInstance.cs)
@@ -83,11 +84,6 @@ Responsibilities:
 - Manage active screen state
 - Control transitions between screens
 
-### Blur is implemented via a custom shader:
-
-Shader:
-[UIBlur.shader](Unity%20Project/Assets/Art/Shaders/Blur/UIBlur.shader)
-
 ### Screen Trigger Utility
 
 A lightweight helper was added to decouple UI buttons from screen logic.
@@ -97,24 +93,23 @@ Script:
 
 Provides a simple entry point for UI interactions, calling the ScreenManager to open the appropriate screen. Designed for direct button hookups.
 
-Summary
+### Blur is implemented via a custom shader:
 
-The system is designed to:
+Shader:
+[UIBlur.shader](Unity%20Project/Assets/Art/Shaders/Blur/UIBlur.shader)
 
-- Enforce consistent screen behaviour
-- Reduce duplication via a shared base class and prefab
-- Centralise screen control through a manager
-- Simplify UI integration through a lightweight trigger layer
+### UI Feedback System
 
+[BtnFeedback.cs](Unity%20Project/Assets/Scripts/UI/BtnFeedback.cs) and [Toggle.cs](Unity%20Project/Assets/Scripts/UI/Toggle.cs) provide a generic UI feedback layer used across all buttons and toggles in the project. They handle scale, color, and sound feedback to ensure consistent interaction responses across the UI.
 </details>
 
 ---------------------------------------------------------------------------------------------------------------------------
-<details>
-<summary>Language System</summary>
-
 # Language System
 
-A global localisation system powered by an external Google Sheet, supporting runtime language switching and editor-driven updates.
+A fully functional global localisation system powered by an external Google Sheet, providing complete runtime text translation, language switching, and editor-driven workflow updates.
+
+<details>
+<summary>Localization Implementation</summary>
 
 ### Language Selection
 
@@ -158,8 +153,20 @@ This system automatically handles:
 
 Prefab: [TranslatedText.prefab](Unity%20Project/Assets/Prefabs/TranslatedText.prefab)
 Script: [TextTranslator.cs](Unity%20Project/Assets/Scripts/Language/TextTranslator.cs)
+</details>
 
-## Summary
+------------------------------------
+# Level Completed Screen
 
-The system enables externalised localisation data, fast editor-driven updates, and automatic UI translation handling with minimal per-element setup.
+A Level Completed screen was implemented and can be triggered via a test button in the HomeScreen.
+
+The sequence includes an initial animation with particles, UI scaling effects, and a final shine transition.
+
+<details>
+<summary>Level Completed Animations</summary>
+
+### Scripts/Shaders used:
+- [TMPBounceAnimation.cs](Unity%20Project/Assets/Scripts/Animations/TMPBounceAnimation.cs) handles an idle bounce animation for the "Level Completed!" text (implemented as a TextMeshPro text, not an image, and fully translatable)
+- [TMPNumberAnimation.cs](Unity%20Project/Assets/Scripts/Animations/TMPNumberAnimation.cs) animates a numeric value from 0 to 250 during the reward sequence
+- [ScrollingTiledImage.shader](Unity%20Project/Assets/Art/Shaders/Scrolling%20Tilled%20Image/ScrollingTiledImage.shader) A custom scrolling texture effect used for the background
 </details>
