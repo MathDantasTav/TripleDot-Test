@@ -174,6 +174,9 @@ This system automatically handles:
 Prefab: [TranslatedText.prefab](Unity%20Project/Assets/Prefabs/TranslatedText.prefab)
 Script: [TextTranslator.cs](Unity%20Project/Assets/Scripts/Language/TextTranslator.cs)
 </details>
+<p align="center">
+  <img src="Gifs/LanguageSettings.gif" width="200">
+</p>
 
 ---
 # Level Completed Screen
