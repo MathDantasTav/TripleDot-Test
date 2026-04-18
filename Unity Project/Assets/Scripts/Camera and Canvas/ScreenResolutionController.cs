@@ -1,10 +1,13 @@
 using System;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering;
+using UnityEngine.Events;
 
 [ExecuteAlways]
 public class ScreenResolutionController : MonoBehaviour
 {
+    public static ScreenResolutionController Instance;
+    public UnityEvent<Vector2> OnResolutionUpdated = new UnityEvent<Vector2>();
+    
     [SerializeField] private Camera _mainCam;
     [SerializeField] private Camera _blurCam;
     [SerializeField, Tooltip(
@@ -27,6 +30,16 @@ public class ScreenResolutionController : MonoBehaviour
 #if UNITY_EDITOR
     private Vector2Int _lastScreenSize;
 #endif
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(this.gameObject);
+            return;
+        }
+        Instance = this;
+    }
 
     private void Start()
     {
@@ -79,5 +92,6 @@ public class ScreenResolutionController : MonoBehaviour
 #if UNITY_EDITOR
         _lastScreenSize = new Vector2Int(Screen.width, Screen.height);
 #endif
+        OnResolutionUpdated?.Invoke(_canvasSize);
     }
 }

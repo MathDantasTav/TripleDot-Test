@@ -1,5 +1,4 @@
 using System;
-using System.Threading.Tasks;
 using UnityEngine;
 
 /// <summary>
@@ -16,13 +15,13 @@ public class NarrowResolutionScaler : MonoBehaviour
     // Compensate Rect is used for a rect that is meant to go to the edge of the screen (i.e. a background)
     // Putting it here will make sure it still stretches to the end of the screen even when the object has been scaled down
     [SerializeField] private RectTransform _compensateRect;
+    [SerializeField] private RectTransform _baseRect;
     [SerializeField] private bool _compensateOnWidth;
     [SerializeField] private bool _compensateOnHeight;
-    [SerializeField] private Vector2 _originalOffsetMin;
-    [SerializeField] private Vector2 _originalOffsetMax;
     private float _thinResolutionCompensation => 1 / _thinResolutionScaleFactor;
     private RectTransform _canvasRect;
 
+#if UNITY_EDITOR
     private RectTransform CanvasRect
     {
         get
@@ -43,57 +42,59 @@ public class NarrowResolutionScaler : MonoBehaviour
     }
     
     private Vector2 _lastCanvasSize;
+#endif
 
     void Start()
     {
-        ApplyResolutionScaling();
+        ScreenResolutionController.Instance.OnResolutionUpdated.AddListener(ApplyResolutionScaling);
     }
 
+    private void OnDestroy()
+    {
+        ScreenResolutionController.Instance.OnResolutionUpdated.RemoveListener(ApplyResolutionScaling);
+    }
+
+#if UNITY_EDITOR
     void Update()
     {
         if (_lastCanvasSize.x != CanvasRect.rect.width ||
             _lastCanvasSize.y != CanvasRect.rect.height)
         {
-            ApplyResolutionScaling();
+            ApplyResolutionScaling(new Vector2(CanvasRect.rect.width, CanvasRect.rect.height));
         }
     }
-
-    void OnValidate()
-    {
-        ApplyResolutionScaling();
-    }
+#endif
     
-    void ApplyResolutionScaling()
+    void ApplyResolutionScaling(Vector2 screenSize)
     {
+#if UNITY_EDITOR
         _lastCanvasSize = new Vector2(CanvasRect.rect.width, CanvasRect.rect.height);
+#endif
+
+        if (_baseRect == null || _compensateRect == null)
+            return;
         
         Canvas.ForceUpdateCanvases();
-
-        var rect = GetComponent<RectTransform>();
-        if (rect == null) return;
-        
-        if (_compensateRect == null)
-            _compensateRect = rect;
         
         var offsetMin = _compensateRect.offsetMin;
         var offsetMax = _compensateRect.offsetMax;
         
-        float ratio = CanvasRect.rect.width / CanvasRect.rect.height;
+        float ratio = screenSize.x / screenSize.y;
         
         if (ratio > _aspectRatioThreshold)
         {
-            rect.localScale = Vector3.one;
+            _compensateRect.localScale = Vector3.one;
             
             if (_compensateOnWidth)
             {
-                offsetMin.x = _originalOffsetMin.x;
-                offsetMax.x = _originalOffsetMax.x;
+                offsetMin.x = _baseRect.offsetMin.x;
+                offsetMax.x = _baseRect.offsetMax.x;
             }
 
             if (_compensateOnHeight)
             {
-                offsetMin.y = _originalOffsetMin.y;
-                offsetMax.y = _originalOffsetMax.y;
+                offsetMin.y = _baseRect.offsetMin.y;
+                offsetMax.y = _baseRect.offsetMax.y;
             }
             
             _compensateRect.offsetMin = offsetMin;
@@ -102,30 +103,30 @@ public class NarrowResolutionScaler : MonoBehaviour
             return;
         }
 
-        rect.localScale = Vector3.one * _thinResolutionScaleFactor;
-
+        _compensateRect.localScale = Vector3.one * _thinResolutionScaleFactor;
+        
         if (_compensateOnWidth)
         {
             float delta = (_thinResolutionCompensation - 1f) / 2;
 
-            float width = _compensateRect.rect.width;
+            float width = _baseRect.rect.width;
 
             float expand = width * delta;
 
-            offsetMin.x = _originalOffsetMin.x - expand;
-            offsetMax.x = _originalOffsetMax.x + expand;
+            offsetMin.x = _baseRect.offsetMin.x - expand;
+            offsetMax.x = _baseRect.offsetMax.x + expand;
         }
 
         if (_compensateOnHeight)
         {
             float delta = (_thinResolutionCompensation - 1f) / 2;
 
-            float height = _compensateRect.rect.height;
+            float height = _baseRect.rect.height;
 
             float expand = height * delta;
 
-            offsetMin.y = _originalOffsetMin.y - expand;
-            offsetMax.y = _originalOffsetMax.y + expand;
+            offsetMin.y = _baseRect.offsetMin.y - expand;
+            offsetMax.y = _baseRect.offsetMax.y + expand;
         }
 
         _compensateRect.offsetMin = offsetMin;
