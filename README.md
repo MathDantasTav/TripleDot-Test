@@ -116,7 +116,7 @@ Shader:
 [BtnFeedback.cs](Unity%20Project/Assets/Scripts/UI/BtnFeedback.cs) and [Toggle.cs](Unity%20Project/Assets/Scripts/UI/Toggle.cs) provide a generic UI feedback layer used across all buttons and toggles in the project. They handle scale, color, and sound feedback to ensure consistent interaction responses across the UI.
 
 <p align="center">
-  <img src="Gifs/BtnFeedback.gif" width="400">
+  <img src="Gifs/BtnFeedback.gif" width="300">
 </p>
 </details>
 <p align="center">
@@ -175,7 +175,7 @@ Prefab: [TranslatedText.prefab](Unity%20Project/Assets/Prefabs/TranslatedText.pr
 Script: [TextTranslator.cs](Unity%20Project/Assets/Scripts/Language/TextTranslator.cs)
 </details>
 <p align="center">
-  <img src="Gifs/LanguageSettings.gif" width="200">
+  <img src="Gifs/LanguageSettings.gif" width="300">
 </p>
 
 ---
