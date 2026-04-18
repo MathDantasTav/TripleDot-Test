@@ -56,8 +56,10 @@ A debug button in the bottom-left of the main menu provides tools to test UI beh
 
 -------------------------------------------------
 # Screen System
+_**Generic system used for the Settings Popup and other UI screens.**_
 
-A reusable UI screen framework built to standardise screen behaviour, transitions, and instantiation across the project.
+A reusable UI framework that ensures consistent screen lifecycle handling, animation flow, and instantiation patterns across all UI screens.
+
 Screens are built on a shared base class and prefab that defines consistent lifecycle behaviour:
 
 - Blurred background layer for visual focus
