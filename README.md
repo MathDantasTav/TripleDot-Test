@@ -2,8 +2,11 @@
 
 This project implements a simple UI-driven main menu with responsive layout, animated bottom navigation, and debug tools for testing UI states.
 
-------------------------------------------------------------------------------------------------------------------------------------------------------
-## Main Menu Overview
+---------------------------------------------------------------------------------------------------------------------------
+<details>
+<summary>Main Menu Overview</summary>
+
+# Main Menu Overview
 
 The main menu consists of:
 
@@ -43,8 +46,13 @@ A debug button in the bottom-left of the main menu provides tools to test UI beh
 - Locking/Unlocking bottom bar buttons
 - Previewing bottom bar buttons icon animations
 
-------------------------------------------------------------------------------------------------------------------------------------------------------
-## Screen System
+</details>
+
+-------------------------------------------------
+<details>
+<summary>Screen System</summary>
+
+# Screen System
 
 A reusable UI screen framework built to standardise screen behaviour, transitions, and instantiation across the project.
 
@@ -98,7 +106,12 @@ The system is designed to:
 - Centralise screen control through a manager
 - Simplify UI integration through a lightweight trigger layer
 
+</details>
+
 ---------------------------------------------------------------------------------------------------------------------------
+<details>
+<summary>Language System</summary>
+
 # Language System
 
 A global localisation system powered by an external Google Sheet, supporting runtime language switching and editor-driven updates.
@@ -149,3 +162,4 @@ Script: [TextTranslator.cs](Unity%20Project/Assets/Scripts/Language/TextTranslat
 ## Summary
 
 The system enables externalised localisation data, fast editor-driven updates, and automatic UI translation handling with minimal per-element setup.
+</details>
