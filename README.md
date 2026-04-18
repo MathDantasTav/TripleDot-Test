@@ -97,3 +97,55 @@ The system is designed to:
 - Reduce duplication via a shared base class and prefab
 - Centralise screen control through a manager
 - Simplify UI integration through a lightweight trigger layer
+
+---------------------------------------------------------------------------------------------------------------------------
+# Language System
+
+A global localisation system powered by an external Google Sheet, supporting runtime language switching and editor-driven updates.
+
+### Language Selection
+
+A language button in the Settings menu opens a popup where the user can select their preferred language.
+
+### Data Source
+
+Translations are managed via a [Google Sheet](https://docs.google.com/spreadsheets/d/1fwy4EqNHLJazoDyAI4jabAOXqOYztwM39k4eBC1m0wY/edit?usp=sharing)
+This is the single source of truth for all localisation data.
+
+### Core System
+
+Script:
+[LanguageManager.cs](Unity%20Project/Assets/Scripts/Language/LanguageManager.cs)
+
+Located in the main scene under the LanguageManager object, this component handles:
+
+- Language selection and application
+- Runtime translation updates
+- Integration with UI text elements
+- Editor Workflow
+
+The system includes an inspector button in LanguageManager to sync translations from the Google Sheet into the Translations ScriptableObject.
+
+### To add a new language:
+
+- Add it to the [Google Sheet](https://docs.google.com/spreadsheets/d/1fwy4EqNHLJazoDyAI4jabAOXqOYztwM39k4eBC1m0wY/edit?usp=sharing)
+- Add the enum in [LanguageTranslations.cs](Unity%20Project/Assets/Scripts/Language/LanguageTranslations.cs)
+- Click the update button in [LanguageManager.cs](Unity%20Project/Assets/Scripts/Language/LanguageManager.cs)
+- Register it in [Translations](Unity%20Project/Assets/Resources/Translations.asset) (LanguagesInfo with enum + flag icon)
+
+The language then becomes available automatically in the UI.
+
+### Translated Text System
+
+This system automatically handles:
+
+- Runtime text translation updates
+- Reacting to language changes
+- Ensuring consistent localisation across all UI elements
+
+Prefab: [TranslatedText.prefab](Unity%20Project/Assets/Prefabs/TranslatedText.prefab)
+Script: [TextTranslator.cs](Unity%20Project/Assets/Scripts/Language/TextTranslator.cs)
+
+## Summary
+
+The system enables externalised localisation data, fast editor-driven updates, and automatic UI translation handling with minimal per-element setup.
