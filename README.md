@@ -1,7 +1,7 @@
 # Unity UI Test Project
 
 - **Android APK (quick test):**  
-  [Download APK](Builds/TripleDot_UI_Test.apk?raw=true)
+  [Download APK](https://raw.githubusercontent.com/MathDantasTav/TripleDot-Test/main/Builds/TripleDot_UI_Test.apk)
 - **Full Unity Project (source):**  
   https://github.com/MathDantasTav/TripleDot-Test/archive/refs/heads/main.zip
 
