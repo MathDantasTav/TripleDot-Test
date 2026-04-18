@@ -1,6 +1,9 @@
 # Unity UI Test Project
 
-Test the game: [Android APK](Builds/Android.apk?raw=true)
+- **Android APK (quick test):**  
+  [Download APK](Builds/Android.apk?raw=true)
+- **Full Unity Project (source):**  
+  https://github.com/MathDantasTav/TripleDot-Test/archive/refs/heads/main.zip
 
 This project implements a simple UI-driven main menu with responsive layout, animated bottom navigation, and debug tools for testing UI states.
 
