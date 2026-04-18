@@ -9,7 +9,7 @@ using UnityEngine;
 [ExecuteAlways]
 public class NarrowResolutionScaler : MonoBehaviour
 {
-    [SerializeField] private float _aspectRatio = 0.5f;
+    [SerializeField] private float _aspectRatioThreshold = 0.5f;
     [SerializeField] private float _thinResolutionScaleFactor = 0.8f;
 
     // Compensate Rect is used for a rect that is meant to go to the edge of the screen (i.e. a background)
@@ -44,6 +44,11 @@ public class NarrowResolutionScaler : MonoBehaviour
     }
 #endif
 
+    void OnValidate()
+    {
+        ApplyResolutionScaling();
+    }
+    
     void ApplyResolutionScaling()
     {
 #if UNITY_EDITOR
@@ -65,7 +70,7 @@ public class NarrowResolutionScaler : MonoBehaviour
         var offsetMin = _compensateRect.offsetMin;
         var offsetMax = _compensateRect.offsetMax;
         
-        if (ratio > _aspectRatio)
+        if (ratio > _aspectRatioThreshold)
         {
             rect.localScale = Vector3.one;
             
@@ -97,8 +102,8 @@ public class NarrowResolutionScaler : MonoBehaviour
 
             float expand = width * delta;
 
-            offsetMin.x = -expand;
-            offsetMax.x = +expand;
+            offsetMin.x = _originalOffsetMin.x - expand;
+            offsetMax.x = _originalOffsetMax.x + expand;
         }
 
         if (_compensateOnHeight)
@@ -109,8 +114,8 @@ public class NarrowResolutionScaler : MonoBehaviour
 
             float expand = height * delta;
 
-            offsetMin.y = -expand;
-            offsetMax.y = +expand;
+            offsetMin.y = _originalOffsetMin.y - expand;
+            offsetMax.y = _originalOffsetMax.y + expand;
         }
 
         _compensateRect.offsetMin = offsetMin;
