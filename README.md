@@ -1,5 +1,4 @@
-## Test the game
-[AndroidAPK](Builds/Android.apk)
+Android build: [Android APK](Builds/Android.apk?raw=true)
 
 # Unity UI Test Project
 
