@@ -35,6 +35,8 @@ A bottom bar with 5 buttons was implemented with support for:
 - Locked/Unlocking animations
 - Icon animations per button
 
+![Bottom Bar](Gifs/bottomButtons.gif)
+
 Bottom bar also contains two UnityEvents:
 
 - ContentActivated: triggered when a button is pressed
@@ -52,6 +54,8 @@ A debug button in the bottom-left of the main menu provides tools to test UI beh
 - Locking/Unlocking bottom bar buttons
 - Previewing bottom bar buttons icon animations
 
+![Bottom Bar Appears](BottomBarAppears.gif)
+
 </details>
 
 -------------------------------------------------
@@ -65,6 +69,7 @@ Screens are built on a shared base class and prefab that defines consistent life
 - Blurred background layer for visual focus
 - Appear/Idle/Disappear animations
 
+![Screen System](Gifs/ScreenSystem.gif)
 
 <details>
 <summary>Screen Architecture</summary>
@@ -168,6 +173,8 @@ Script: [TextTranslator.cs](Unity%20Project/Assets/Scripts/Language/TextTranslat
 A Level Completed screen was implemented and can be triggered via a test button in the HomeScreen.
 
 The sequence includes an initial animation with particles, UI scaling effects, and a final shine transition.
+
+![Level Completed](Gifs/LevelCompleted.gif)
 
 <details>
 <summary>Level Completed Animations</summary>
