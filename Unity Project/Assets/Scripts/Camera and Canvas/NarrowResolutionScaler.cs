@@ -1,4 +1,5 @@
 using System;
+using System.Threading.Tasks;
 using UnityEngine;
 
 /// <summary>
@@ -20,10 +21,29 @@ public class NarrowResolutionScaler : MonoBehaviour
     [SerializeField] private Vector2 _originalOffsetMin;
     [SerializeField] private Vector2 _originalOffsetMax;
     private float _thinResolutionCompensation => 1 / _thinResolutionScaleFactor;
+    private RectTransform _canvasRect;
+
+    private RectTransform CanvasRect
+    {
+        get
+        {
+            if (_canvasRect == null) 
+            {
+                var rect = GetComponent<RectTransform>();
+                if (rect == null) return null;
+
+                var canvas = rect.GetComponentInParent<Canvas>();
+                if (canvas == null) return rect;
+
+                _canvasRect = canvas.GetComponent<RectTransform>();
+            }
+
+            return _canvasRect;
+        }
+    }
     
 #if UNITY_EDITOR
-    private Vector2 _lastScreenSize;
-    private Rect _lastSafeArea;
+    private Vector2 _lastCanvasSize;
 #endif
 
     void Start()
@@ -35,9 +55,8 @@ public class NarrowResolutionScaler : MonoBehaviour
     // Only run in editor (avoid per-frame cost in play mode if you want)
     void Update()
     {
-        if (_lastScreenSize.x != Screen.width ||
-            _lastScreenSize.y != Screen.height ||
-            _lastSafeArea != Screen.safeArea)
+        if (_lastCanvasSize.x != CanvasRect.rect.width ||
+            _lastCanvasSize.y != CanvasRect.rect.height)
         {
             ApplyResolutionScaling();
         }
@@ -52,14 +71,10 @@ public class NarrowResolutionScaler : MonoBehaviour
     void ApplyResolutionScaling()
     {
 #if UNITY_EDITOR
-        _lastScreenSize = new Vector2(Screen.width, Screen.height);
-        _lastSafeArea = Screen.safeArea;
+        _lastCanvasSize = new Vector2(CanvasRect.rect.width, CanvasRect.rect.height);
 #endif
         
         Canvas.ForceUpdateCanvases();
-        
-        var safeArea = Screen.safeArea;
-        float ratio = safeArea.width / safeArea.height;
 
         var rect = GetComponent<RectTransform>();
         if (rect == null) return;
@@ -69,6 +84,8 @@ public class NarrowResolutionScaler : MonoBehaviour
         
         var offsetMin = _compensateRect.offsetMin;
         var offsetMax = _compensateRect.offsetMax;
+        
+        float ratio = CanvasRect.rect.width / CanvasRect.rect.height;
         
         if (ratio > _aspectRatioThreshold)
         {

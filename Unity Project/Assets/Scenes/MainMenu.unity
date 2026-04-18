@@ -673,8 +673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 0.000011444092, y: 0}
-  m_SizeDelta: {x: 243.65616, y: 244.9}
+  m_AnchoredPosition: {x: -0.0000038146973, y: 0}
+  m_SizeDelta: {x: 219.29056, y: 244.9}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &664683231
 MonoBehaviour:
@@ -800,7 +800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21747d8896822454ea01a75a16ba44dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NarrowResolutionScaler
-  _aspectRatioThreshold: 0.5
+  _aspectRatioThreshold: 0.46
   _thinResolutionScaleFactor: 0.85
   _compensateRect: {fileID: 664683230}
   _compensateOnWidth: 1
@@ -933,7 +933,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6718184073093921964, guid: f944dd3606e53ef4eb2cc68324fe8a01, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.9999695
+      value: -1.999939
       objectReference: {fileID: 0}
     - target: {fileID: 7127310721130069042, guid: f944dd3606e53ef4eb2cc68324fe8a01, type: 3}
       propertyPath: m_text
@@ -1045,6 +1045,43 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8135145648083917031, guid: f944dd3606e53ef4eb2cc68324fe8a01, type: 3}
   m_PrefabInstance: {fileID: 750726509}
   m_PrefabAsset: {fileID: 0}
+--- !u!84 &818487414
+RenderTexture:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_ImageContentsHash:
+    serializedVersion: 2
+    Hash: 00000000000000000000000000000000
+  m_IsAlphaChannelOptional: 0
+  serializedVersion: 6
+  m_Width: 225
+  m_Height: 540
+  m_AntiAliasing: 1
+  m_MipCount: -1
+  m_DepthStencilFormat: 0
+  m_ColorFormat: 4
+  m_MipMap: 0
+  m_GenerateMips: 1
+  m_SRGB: 1
+  m_UseDynamicScale: 0
+  m_UseDynamicScaleExplicit: 0
+  m_BindMS: 0
+  m_EnableCompatibleFormat: 1
+  m_EnableRandomWrite: 0
+  m_TextureSettings:
+    serializedVersion: 2
+    m_FilterMode: 1
+    m_Aniso: 1
+    m_MipBias: 0
+    m_WrapU: 1
+    m_WrapV: 1
+    m_WrapW: 1
+  m_Dimension: 2
+  m_VolumeDepth: 1
+  m_ShadowSamplingMode: 2
 --- !u!1 &1005748664
 GameObject:
   m_ObjectHideFlags: 0
@@ -1084,7 +1121,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -80}
-  m_SizeDelta: {x: 367.7897, y: 100}
+  m_SizeDelta: {x: 264.0625, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005748666
 MonoBehaviour:
@@ -1124,7 +1161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21747d8896822454ea01a75a16ba44dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::NarrowResolutionScaler
-  _aspectRatioThreshold: 0.5
+  _aspectRatioThreshold: 0.46
   _thinResolutionScaleFactor: 0.8
   _compensateRect: {fileID: 1005748665}
   _compensateOnWidth: 1
@@ -1161,7 +1198,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6718184073093921964, guid: f944dd3606e53ef4eb2cc68324fe8a01, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.9999695
+      value: -1.999939
       objectReference: {fileID: 0}
     - target: {fileID: 7127310721130069042, guid: f944dd3606e53ef4eb2cc68324fe8a01, type: 3}
       propertyPath: m_text
@@ -1294,43 +1331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TextTranslator
   _translationKey: HealthBarFull
---- !u!84 &1168086462
-RenderTexture:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 
-  m_ImageContentsHash:
-    serializedVersion: 2
-    Hash: 00000000000000000000000000000000
-  m_IsAlphaChannelOptional: 0
-  serializedVersion: 6
-  m_Width: 250
-  m_Height: 540
-  m_AntiAliasing: 1
-  m_MipCount: -1
-  m_DepthStencilFormat: 0
-  m_ColorFormat: 4
-  m_MipMap: 0
-  m_GenerateMips: 1
-  m_SRGB: 1
-  m_UseDynamicScale: 0
-  m_UseDynamicScaleExplicit: 0
-  m_BindMS: 0
-  m_EnableCompatibleFormat: 1
-  m_EnableRandomWrite: 0
-  m_TextureSettings:
-    serializedVersion: 2
-    m_FilterMode: 1
-    m_Aniso: 1
-    m_MipBias: 0
-    m_WrapU: 1
-    m_WrapV: 1
-    m_WrapW: 1
-  m_Dimension: 2
-  m_VolumeDepth: 1
-  m_ShadowSamplingMode: 2
 --- !u!1 &1172943627
 GameObject:
   m_ObjectHideFlags: 0
@@ -1434,7 +1434,7 @@ Camera:
     serializedVersion: 2
     m_Bits: 55
   m_RenderingPath: -1
-  m_TargetTexture: {fileID: 1168086462}
+  m_TargetTexture: {fileID: 818487414}
   m_TargetDisplay: 0
   m_TargetEye: 0
   m_HDR: 1
@@ -2098,7 +2098,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6718184073093921964, guid: f944dd3606e53ef4eb2cc68324fe8a01, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.9999695
+      value: -1.999939
       objectReference: {fileID: 0}
     - target: {fileID: 7127310721130069042, guid: f944dd3606e53ef4eb2cc68324fe8a01, type: 3}
       propertyPath: m_fontSize
@@ -2310,7 +2310,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1173.6111, y: 2535}
+  m_SizeDelta: {x: 1056.25, y: 2535}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1864481961
 MonoBehaviour:
