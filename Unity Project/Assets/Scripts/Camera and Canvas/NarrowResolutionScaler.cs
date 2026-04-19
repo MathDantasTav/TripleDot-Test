@@ -21,7 +21,6 @@ public class NarrowResolutionScaler : MonoBehaviour
     private float _thinResolutionCompensation => 1 / _thinResolutionScaleFactor;
     private RectTransform _canvasRect;
 
-#if UNITY_EDITOR
     private RectTransform CanvasRect
     {
         get
@@ -42,7 +41,6 @@ public class NarrowResolutionScaler : MonoBehaviour
     }
     
     private Vector2 _lastCanvasSize;
-#endif
 
     void OnEnable()
     {
@@ -54,7 +52,6 @@ public class NarrowResolutionScaler : MonoBehaviour
         ScreenResolutionController.Instance?.OnResolutionUpdated.RemoveListener(ApplyResolutionScaling);
     }
 
-#if UNITY_EDITOR
     void Update()
     {
         if (_lastCanvasSize.x != CanvasRect.rect.width ||
@@ -63,13 +60,10 @@ public class NarrowResolutionScaler : MonoBehaviour
             ApplyResolutionScaling(new Vector2(CanvasRect.rect.width, CanvasRect.rect.height));
         }
     }
-#endif
     
     void ApplyResolutionScaling(Vector2 screenSize)
     {
-#if UNITY_EDITOR
         _lastCanvasSize = new Vector2(CanvasRect.rect.width, CanvasRect.rect.height);
-#endif
 
         if (_baseRect == null || _compensateRect == null)
             return;
