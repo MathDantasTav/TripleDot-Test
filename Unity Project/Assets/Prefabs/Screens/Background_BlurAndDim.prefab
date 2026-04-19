@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7753713532047643386}
   - component: {fileID: 4314561133848211605}
   - component: {fileID: 6833443168168254585}
-  - component: {fileID: 1087134862296313866}
+  - component: {fileID: 4937777935005910461}
   m_Layer: 3
   m_Name: Background_BlurAndDim
   m_TagString: Untagged
@@ -73,7 +73,7 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!223 &1087134862296313866
+--- !u!223 &4937777935005910461
 Canvas:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
