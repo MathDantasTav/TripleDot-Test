@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -42,6 +43,12 @@ public class NarrowResolutionScaler : MonoBehaviour
     
     private Vector2 _lastCanvasSize;
 
+    IEnumerator Start()
+    {
+        yield return null;
+        ApplyResolutionScaling(new Vector2(CanvasRect.rect.width, CanvasRect.rect.height));
+    }
+    
     void OnEnable()
     {
         ScreenResolutionController.Instance?.OnResolutionUpdated.AddListener(ApplyResolutionScaling);
