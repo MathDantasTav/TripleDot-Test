@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 
 [ExecuteAlways]
 public class ScreenResolutionController : MonoBehaviour
@@ -28,7 +27,7 @@ public class ScreenResolutionController : MonoBehaviour
     private Vector2Int _lastScreenSize;
 #endif
 
-    private void Start()
+    private void Awake()
     {
         ApplyScaling();
     }
