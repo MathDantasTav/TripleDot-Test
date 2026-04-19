@@ -19,6 +19,9 @@ public class NarrowResolutionScaler : MonoBehaviour
     [SerializeField] private bool _compensateOnWidth;
     [SerializeField] private bool _compensateOnHeight;
     private float _thinResolutionCompensation => 1 / _thinResolutionScaleFactor;
+    private RectTransform _canvasRect;
+
+#if UNITY_EDITOR
     private RectTransform CanvasRect
     {
         get
@@ -37,15 +40,18 @@ public class NarrowResolutionScaler : MonoBehaviour
             return _canvasRect;
         }
     }
-    private RectTransform _canvasRect;
     
-#if UNITY_EDITOR
     private Vector2 _lastCanvasSize;
 #endif
 
-    void Start()
+    void OnEnable()
     {
-        ApplyResolutionScaling();
+        ScreenResolutionController.Instance?.OnResolutionUpdated.AddListener(ApplyResolutionScaling);
+    }
+
+    private void OnDisable()
+    {
+        ScreenResolutionController.Instance?.OnResolutionUpdated.RemoveListener(ApplyResolutionScaling);
     }
 
 #if UNITY_EDITOR
@@ -54,12 +60,12 @@ public class NarrowResolutionScaler : MonoBehaviour
         if (_lastCanvasSize.x != CanvasRect.rect.width ||
             _lastCanvasSize.y != CanvasRect.rect.height)
         {
-            ApplyResolutionScaling();
+            ApplyResolutionScaling(new Vector2(CanvasRect.rect.width, CanvasRect.rect.height));
         }
     }
 #endif
     
-    void ApplyResolutionScaling()
+    void ApplyResolutionScaling(Vector2 screenSize)
     {
 #if UNITY_EDITOR
         _lastCanvasSize = new Vector2(CanvasRect.rect.width, CanvasRect.rect.height);
@@ -73,7 +79,7 @@ public class NarrowResolutionScaler : MonoBehaviour
         var offsetMin = _compensateRect.offsetMin;
         var offsetMax = _compensateRect.offsetMax;
         
-        float ratio = CanvasRect.rect.x / CanvasRect.rect.y;
+        float ratio = screenSize.x / screenSize.y;
         
         if (ratio > _aspectRatioThreshold)
         {
