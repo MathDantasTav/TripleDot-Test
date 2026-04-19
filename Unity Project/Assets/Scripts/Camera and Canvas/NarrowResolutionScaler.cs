@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using UnityEngine;
 
 /// <summary>
@@ -45,9 +44,8 @@ public class NarrowResolutionScaler : MonoBehaviour
     private Vector2 _lastCanvasSize;
 #endif
 
-    IEnumerator Start()
+    void Start()
     {
-        yield return null;
         ApplyResolutionScaling();
     }
 
