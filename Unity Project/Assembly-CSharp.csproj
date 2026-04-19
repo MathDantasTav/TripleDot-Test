@@ -927,14 +927,8 @@
     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
       <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.2D.IK.Runtime">
-      <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.2D.IK.Runtime.dll</HintPath>
-    </Reference>
     <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
       <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Editor">
-      <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.2D.Animation.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.InternalAPIEditorBridge.001">
       <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.InternalAPIEditorBridge.001.dll</HintPath>
@@ -956,9 +950,6 @@
     </Reference>
     <Reference Include="Unity.2D.Tooling.Editor">
       <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.2D.Tooling.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.Animation.Runtime">
-      <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.2D.Animation.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.RenderPipelines.Core.Runtime.Shared">
       <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.Shared.dll</HintPath>
@@ -1025,9 +1016,6 @@
     </Reference>
     <Reference Include="Unity.VisualScripting.Flow.Editor">
       <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.2D.IK.Editor">
-      <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.2D.IK.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.SpriteShape.Runtime">
       <HintPath>C:\TripleDot Test\TripleDot Test\Unity Project\Library\ScriptAssemblies\Unity.2D.SpriteShape.Runtime.dll</HintPath>
